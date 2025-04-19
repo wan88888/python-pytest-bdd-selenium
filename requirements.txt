@@ -1,0 +1,10 @@
+pytest==8.3.5
+pytest-bdd==8.1.0
+pytest-html==4.1.1
+pytest-xdist==3.7.0
+pytest-rerunfailures==14.0
+pytest-metadata==3.1.1
+selenium==4.31.0
+webdriver-manager==4.0.2
+requests==2.32.3
+loguru==0.7.2 

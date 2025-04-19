@@ -1,0 +1,50 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Test reports and artifacts
+reports/
+logs/
+screenshots/
+report.html
+*.html
+assets/
+
+# Browser drivers
+drivers/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+.tmp/
+temp/ 
