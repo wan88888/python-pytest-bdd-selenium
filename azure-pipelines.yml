@@ -10,17 +10,24 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+# 显式声明 checkout 步骤（避免系统 expand 日志让人困惑）
+- checkout: self
+  fetchDepth: 1
+
+# 设置 Python 版本
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.10'
   displayName: 'Use Python 3.10'
 
+# 安装依赖
 - script: |
     python -m pip install --upgrade pip
     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     pip install pytest
   displayName: 'Install dependencies'
 
+# 运行测试
 - script: |
     pytest tests --maxfail=1 --disable-warnings -q
   displayName: 'Run tests'
